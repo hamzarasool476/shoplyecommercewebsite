@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoply — Modern E-Commerce</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">SHOPLY</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#products">Products</a>
+    </nav>
+
+    <button class="cart-btn" onclick="openCart()">
+      🛒 Cart (<span id="cartCount">0</span>)
+    </button>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+        <h1>Shop smarter. Live better.</h1>
+
+        <p>
+          Discover stylish products, everyday essentials, and
+          must-have items — all in one beautiful online store.
+        </p>
+
+        <a href="#products" class="shop-btn">
+          Shop Now →
+        </a>
+      </div>
+
+      <div class="hero-image">
+        🛍️
+      </div>
+
+    </section>
+
+
+    <!-- Categories -->
+    <section id="categories">
+
+      <h2 class="section-title">
+        Shop by Category
+      </h2>
+
+      <div class="categories">
+
+        <div
+          class="category"
+          onclick="filterCategory('Fashion')"
+        >
+          <span>👕</span>
+          Fashion
+        </div>
+
+        <div
+          class="category"
+          onclick="filterCategory('Electronics')"
+        >
+          <span>🎧</span>
+          Electronics
+        </div>
+
+        <div
+          class="category"
+          onclick="filterCategory('Home')"
+        >
+          <span>🏠</span>
+          Home
+        </div>
+
+        <div
+          class="category"
+          onclick="filterCategory('Beauty')"
+        >
+          <span>✨</span>
+          Beauty
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Products -->
+    <section id="products">
+
+      <div class="shop-header">
+
+        <h2>Featured Products</h2>
+
+        <input
+          type="text"
+          id="search"
+          class="search"
+          placeholder="Search products..."
+          oninput="searchProducts()"
+        >
+
+      </div>
+
+      <div
+        class="products"
+        id="productGrid"
+      ></div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Shopping Cart -->
+  <aside class="cart" id="cart">
+
+    <div class="cart-header">
+
+      <h2>Your Cart</h2>
+
+      <button
+        class="close-cart"
+        onclick="closeCart()"
+      >
+        ✕
+      </button>
+
+    </div>
+
+    <div id="cartItems">
+      <p>Your cart is empty.</p>
+    </div>
+
+    <div class="cart-total">
+      <span>Total</span>
+
+      <span>
+        $<span id="cartTotal">0.00</span>
+      </span>
+    </div>
+
+    <button
+      class="checkout"
+      onclick="checkout()"
+    >
+      Proceed to Checkout
+    </button>
+
+  </aside>
+
+
+  <footer>
+
+    <h2>SHOPLY</h2>
+
+    <p>
+      Your modern online shopping destination.
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
